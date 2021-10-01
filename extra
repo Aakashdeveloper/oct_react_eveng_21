@@ -1,0 +1,64 @@
+install >> https://code.visualstudio.com/download
+install >> https://nodejs.org/en/
+create account >> https://github.com/
+install >> https://git-scm.com/downloads
+bookmark >> https://github.com/Aakashdeveloper/oct_react_eveng_21 
+
+//extensions
+tabnine
+vscode-icons
+git history
+git  lens
+eslint
+
+
+Npm
+React = 3
+Mock API
+json-server
+Github
+Deployment
+-> MERN
+-> heroku
+-> Aws
+-> Docker
+-> Nginx
+React-JWT(Login Logout)-2
+React_hooks -1
+React-GraphQL-1
+HOC
+Basic React Native=1
+React-Redux =1
+React-Redux =1
+///////Walkthrough///////
+React-Saga -1
+React-with-typescript-1
+Testing Jest Enzime
+--------NOT Backend--------------
+API
+GraphQL
+Login/Logout
+
+
+//////////////
+React
+
+React is frontend framework/lib that help to build single page
+application using component base structure
+
+SPA> single page application
+> open source
+
+npm > node package manager
+json > javascript object notation
+[
+    {
+        "id":1,
+        "name":"John"
+    },
+    {
+        "id":2,
+        "name":"Aman",
+        "city":"Amsterdam
+    }
+]
