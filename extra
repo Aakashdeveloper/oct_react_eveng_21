@@ -62,3 +62,71 @@ json > javascript object notation
         "city":"Amsterdam
     }
 ]
+
+///////////
+package.json
+/////////
+> This is the entry point to the application
+> script => start, build ,test
+> Meta => Name, version, description, author
+> packages use for app
+
+
+///////////
+step to generate package.json
+///////////
+** NodeJs Must be install in system
+> open cmd/terminal go inside the folder(cd)
+> npm init
+> answer all questions
+> type "yes"
+
+///////////
+step to install package
+///////////
+** NodeJs Must be install in system
+> open cmd/terminal go inside the folder(cd)
+> npm i packagename
+
+
+///////////
+Step to generate react application
+//////////
+#window
+>>>>One Time in New Laptop<<<<<<
+> open cmd as administrator
+> npm i -g create-react-app
+> close cmd
+
+>>>>>Next Every Time You want new app<<<<<<
+> open new cmd
+> go inside the folder where you want to generate
+> create-react-app appname
+--------------------------------------------
+
+#mac/linux
+>>>>One Time in New Laptop<<<<<<
+> open terminal
+> sudo npm i -g create-react-app
+> close terminal
+
+>>>>>Next Every Time You want new app<<<<<<
+> open new terminal
+> go inside the folder where you want to generate
+> create-react-app appname
+---------------------------------
+
+#office
+>>>>>Every Time You want new app<<<<<<
+> open new cmd/terminal
+> go inside the folder where you want to generate
+> npx create-react-app appname
+
+
+///////////
+Step to run react app
+//////////
+> open cmd/terminal
+> go inside the folder where you want to generate
+> npm start
+> localhost:3000
