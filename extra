@@ -130,3 +130,18 @@ Step to run react app
 > go inside the folder where you want to generate
 > npm start
 > localhost:3000
+///////////
+
+> React >> this is the main package for the app
+> react-dom >> This help us to render the content
+> react-script >> this help to compile and run the app
+
+/////////
+function add(a,b){
+    var out = [a,b]
+    return out
+}
+
+add(1,2)
+
+>[1,2]
