@@ -145,3 +145,7 @@ function add(a,b){
 add(1,2)
 
 >[1,2]
+
+////////////////////////////////
+Block Level > Always start from new line
+inline > start in same line
