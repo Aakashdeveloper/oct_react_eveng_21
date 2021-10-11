@@ -149,3 +149,38 @@ add(1,2)
 ////////////////////////////////
 Block Level > Always start from new line
 inline > start in same line
+
+///////////
+inline > css in the html tag
+styletag > css in the head of page
+stylesheet > separate Css
+
+inline > styletag > sheetsheet
+
+inline{
+    color:red;
+    font-size:30px
+}
+
+styletag{
+    color:orange;
+    text-align:center
+}
+
+sheetsheet{
+    color:green;
+    text-align:right;
+    border-color:green
+}
+
+{
+    color:red;
+    font-size:30px;
+    text-align:center;
+    border-color:green;
+}
+
+//////////////////////
+tagName > h1 p a
+id > when we have target unique
+className > when we have target common
