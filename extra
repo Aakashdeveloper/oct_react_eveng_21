@@ -182,5 +182,5 @@ sheetsheet{
 
 //////////////////////
 tagName > h1 p a
-id > when we have target unique
-className > when we have target common
+id # > when we have target unique
+className . > when we have target common
