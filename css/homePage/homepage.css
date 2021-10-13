@@ -1,0 +1,79 @@
+body{
+    margin: auto;
+}
+#search{
+    height:500px;
+    width:100%;
+    background-image: url('https://i.ibb.co/Jv1Ckhg/manali.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100% 500px;
+}
+#QuickSearch{
+    height:500px;
+    width:100%;
+    border:2px solid green;
+}
+
+.brand{
+    display: inline-block;
+    margin-left:5%;
+    font-size:30px;
+    color:white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+a{
+    text-decoration: none;
+}
+.social{
+    display: inline-block;
+    margin-left:64%;
+    
+}
+
+.socialIcon{
+    height:50px;
+    width:50px;
+}
+
+#logo{
+    height:150px;
+    width:150px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    margin-left: 45%;
+    margin-top: 2%;
+}
+
+#logo > span{
+    color:#91c00a;
+    font-size: 115px;
+    margin-left: 13%;
+}
+
+#heading{
+    font-size: 30px;
+    color:white;
+    text-align: center;
+    background-color: #7faa21;
+    width:30%;
+    margin:auto;
+    margin-top:3%;
+}
+
+#dropdown{
+    margin-left: 30%;
+    margin-top: 2%;
+    height: 60px;
+    width: 42%;
+}
+
+select{
+    height: 60px;
+    width:40% 
+}
+
+#secondSelect{
+    width:55% 
+}
