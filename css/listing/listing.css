@@ -1,0 +1,54 @@
+body{
+    margin: auto;
+}
+
+#header{
+    background-color:#41d03f;
+    height:90px;
+    width:100%
+}
+
+#logo_main{
+    height:65px;
+    width:65px;
+    background-color:white;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left:80px;
+    margin-top: 0%;
+}
+#heading{
+    color:#41d03f;
+    margin: 15px;
+}
+
+.social{
+    display: inline-block;
+    margin-left:70%;
+    margin-top: 1%;
+}
+
+.socialIcon{
+    height:50px;
+    width:50px;
+}
+
+#main{
+    margin-left:12%;
+    margin-top:5%
+}
+
+#filter{
+    width:20%;
+    height:600px;
+    border:2px solid black;
+    float:left
+}
+
+#content{
+    width:70%;
+    height:600px;
+    border:2px solid black;
+    float:left;
+    margin-left: 5%
+}
