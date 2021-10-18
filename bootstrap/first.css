@@ -1,0 +1,30 @@
+#first{
+    height: 200px;
+    background-color: purple
+}
+#second{
+    height: 200px;
+    background-color: rgb(144, 250, 218)
+}
+#third{
+    height: 200px;
+    background-color: rgb(250, 165, 144)
+}
+#fourth{
+    height: 200px;
+    background-color: rgb(180, 165, 245)
+}
+#fifth{
+    height: 200px;
+    background-color: rgb(241, 153, 237)
+}
+#sixth{
+    height: 200px;
+    background-color: rgb(229, 240, 166)
+}
+/*
+.btn-danger{
+    background-color: #c91a9d !important;
+    border-color: #3fd43a;
+}
+*/

@@ -184,3 +184,14 @@ sheetsheet{
 tagName > h1 p a
 id # > when we have target unique
 className . > when we have target common
+
+//////
+bootstrap3
+
+xs < 768
+sm > 768
+md > 992
+lg > 1200
+
+12/6 = 2
+12/4 = 3
