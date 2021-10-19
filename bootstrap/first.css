@@ -28,3 +28,12 @@
     border-color: #3fd43a;
 }
 */
+.glyphicon-trash{
+    font-size:20px;
+    color:red
+}
+
+.glyphicon-edit{
+    font-size:20px;
+    color:green
+}
