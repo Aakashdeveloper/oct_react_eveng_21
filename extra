@@ -195,3 +195,19 @@ lg > 1200
 
 12/6 = 2
 12/4 = 3
+
+bootstrap4
+col- <576px
+sm > 576px
+md > 768
+lg > 992
+xl > 1200
+
+
+bootstrap5
+col- <576px
+sm > 576px
+md > 768
+lg > 992
+xl > 1200
+xxl > 1400
