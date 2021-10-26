@@ -223,9 +223,37 @@ class
 > Api calling, data manage, logics as well as display
 > we can maintain state
 
+//////////////////////
+state
+> State Act like a local variable
+> every component can have its own state
+> state are mutable
+> any data interaction wil happen through state only
+
+props
+> help to transfer data from one component to another
+> value of props cannot be updated
+> data can only be pass in nested components
+
 
 
 //////Javascript///////
 map
 filter
 indexof
+
+var city = ['Delhi', 'Mumbai', 'Pune', 'Amsterdam', 'London', 'Dubai']
+city.map((data)=>{return `hi form ${data}`})
+(6) ['hi form Delhi', 'hi form Mumbai', 'hi form Pune', 'hi form Amsterdam', 'hi form London', 'hi form Dubai']
+
+//es5
+var a = 10
+var b = "my age is "+a
+"my age is 10"
+
+//es6
+var a = 10
+var b = `my age is ${a}`
+"my age is 10"
+
+
