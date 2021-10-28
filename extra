@@ -257,3 +257,32 @@ var b = `my age is ${a}`
 "my age is 10"
 
 
+
+////
+parent to child >>> props
+child to parent >>>> props with function
+
+function add(a,b){
+    return a+b
+}
+
+add(1,2)
+
+in parent we define the function
+in child we will call the function
+
+//////////
+var a = [5,4,8,2,9,4,6,3,4]
+a.filter((data) => { return data>5})
+[8, 9, 6]
+
+
+var city = ["Delhi","London","Boston","Pune"]
+city.indexOf("Delhi")
+0
+city.indexOf("Boston")
+2
+city.indexOf("Amsterdam")
+2
+city.indexOf("Mumbai")
+-1

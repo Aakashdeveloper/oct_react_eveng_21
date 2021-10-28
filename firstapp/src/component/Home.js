@@ -9,16 +9,29 @@ class Home extends Component {
         super()
 
         this.state={
-            products:JSON
+            products:JSON,
+            filtered:JSON
         }
+    }
+
+    /*
+    var a = [5,4,8,2,9,4,6,3,4]
+    a.filter((data) => { return data>5})
+    */
+    filterProduct=(keyword)=>{
+        var output = this.state.products.filter((item) => {
+            return item.name.toLowerCase().indexOf(keyword.toLowerCase())>-1
+        })
+        this.setState({filtered:output})
+
     }
 
     render(){
         return(
             <React.Fragment>
-                <Header/>
+                <Header userText={(data) => {this.filterProduct(data)}}/>
                 <br/>
-                <ProductDisplay prodData={this.state.products}/>
+                <ProductDisplay prodData={this.state.filtered}/>
                 <Footer year="2021" month="Oct"/>
             </React.Fragment>
         )
