@@ -20,10 +20,9 @@ class Home extends Component {
     */
     filterProduct=(keyword)=>{
         var output = this.state.products.filter((item) => {
-            return item.name.toLowerCase().indexOf(keyword.toLowerCase())>-1
+            return (item.name.toLowerCase().indexOf(keyword.toLowerCase())>-1)
         })
         this.setState({filtered:output})
-
     }
 
     render(){

@@ -286,3 +286,12 @@ city.indexOf("Amsterdam")
 2
 city.indexOf("Mumbai")
 -1
+
+
+var a = 10;
+
+a>10 ? "Hii":"Bie"
+'Bie'
+
+a==10 ? "Hii":"Bie"
+'Hii'
