@@ -10,7 +10,8 @@ class Home extends Component {
 
         this.state={
             products:JSON,
-            filtered:JSON
+            filtered:JSON,
+            secondFilter:JSON
         }
     }
 
@@ -22,15 +23,22 @@ class Home extends Component {
         var output = this.state.products.filter((item) => {
             return (item.name.toLowerCase().indexOf(keyword.toLowerCase())>-1)
         })
-        this.setState({filtered:output})
+        this.setState({secondFilter:output,filtered:output})
+    }
+
+    filterDescription=(keyword) =>{
+        var output = this.state.filtered.filter((item) => {
+            return (item.description.toLowerCase().indexOf(keyword.toLowerCase())>-1)
+        })
+        this.setState({secondFilter:output})
     }
 
     render(){
         return(
             <React.Fragment>
-                <Header userText={(data) => {this.filterProduct(data)}}/>
+                <Header userText={(data) => {this.filterProduct(data)}} userDescription={(data) => {this.filterDescription(data)}}/>
                 <br/>
-                <ProductDisplay prodData={this.state.filtered}/>
+                <ProductDisplay prodData={this.state.secondFilter}/>
                 <Footer year="2021" month="Oct"/>
             </React.Fragment>
         )

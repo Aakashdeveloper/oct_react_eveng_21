@@ -20,6 +20,10 @@ class Header extends Component {
         this.props.userText(event.target.value)
     }
     
+    handleChange1 = (event) => {
+        this.props.userDescription(event.target.value)
+    }
+
     render(){
         console.log("inside render")
         return(
@@ -28,6 +32,7 @@ class Header extends Component {
                     <div className="logo">{this.state.title}</div>
                     <center>
                         <input onChange={this.handleChange}/>
+                        <input onChange={this.handleChange1}/>
                         <div style={{color:'white'}}>{this.state.keyword}</div>
                     </center>
                 </header>
