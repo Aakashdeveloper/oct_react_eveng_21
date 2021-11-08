@@ -310,17 +310,20 @@ history > Redirection
 location > Query
 match > Params
 
-(get) hotels>         https://developerfunnel.herokuapp.com/hotels
-(get) hotelwrtcity >  https://developerfunnel.herokuapp.com/hotels?city=6
-(get) hoteldetails >  https://developerfunnel.herokuapp.com/hotelsdetails/1
-(get) onbasisoftrip > https://developerfunnel.herokuapp.com/hotellist/1
+(get) restaurants>         https://zomatoajulypi.herokuapp.com/restaurants
+(get) restwrtcity >        https://zomatoajulypi.herokuapp.com/restaurant?stateId=1
+(get) hoteldetails >       http://zomatoajulypi.herokuapp.com/details/1
+(get) quickSearch>         https://zomatoajulypi.herokuapp.com/quicksearch
+(get) onbasisofMeal >      https://zomatoajulypi.herokuapp.com/restaurant?mealtype_id=
 
-(get) roomfilter >    https://developerfunnel.herokuapp.com/hotellist/4?roomtype=1
+(get) cuisinefilter >      https://zomatoajulypi.herokuapp.com/filter/4?cuisine=1
 
-(get) costfilter >    https://developerfunnel.herokuapp.com/hotellist/1?hcost=1000&lcost=500
+(get) costfilter >         https://zomatoajulypi.herokuapp.com/filter/1?hcost=1000&lcost=500
 
-(get) cityname >      https://developerfunnel.herokuapp.com/location
-(get) rooms >         https://developerfunnel.herokuapp.com/rooms
-(get) quickSearch>    https://developerfunnel.herokuapp.com/booking
-(get) bookingdetails> https://developerfunnel.herokuapp.com/allBooking
-(post)placebooking >  https://developerfunnel.herokuapp.com/placeBook
+(get) cityname >           https://zomatoajulypi.herokuapp.com/location
+(get) menu >               https://zomatoajulypi.herokuapp.com/menu/1
+
+(post) orderspage >        http://zomatoajulypi.herokuapp.com/menuItem
+                           body [1,4,5]
+(get) allorder>            
+(post)placeOrder >         
