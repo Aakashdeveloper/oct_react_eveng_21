@@ -11,19 +11,9 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-color:red;
-    background-size: 100% 500px;
+    background-size: 100% 400px;
     width:100%;
-    height: 500px;
-}
-
-#login{
-    margin-left: 70%;
-}
-
-#login> a{
-    text-decoration: none;
-    color:black;
-    font-size:30px;
+    height: 400px;
 }
 
 #logo{
@@ -40,7 +30,7 @@ body{
 #logo > span {
     font-weight: bold;
     position: absolute;
-    margin-left: -25px;
+    margin-left: -47px;
     margin-top: 10px
 }
 
@@ -66,4 +56,5 @@ select{
 
 #restaurants{
     width:50%;
+    margin-left: 2%;
 }
