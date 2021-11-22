@@ -1,0 +1,14 @@
+{
+  "booking": [
+    {
+      "id": 11562,
+      "hotel_name": "Cafe Wink",
+      "name": "Aakash",
+      "phone": "76767757567",
+      "email": "a@gmail.com",
+      "cost": 450,
+      "address": "Hno12",
+      "details": "58,59"
+    }
+  ]
+}

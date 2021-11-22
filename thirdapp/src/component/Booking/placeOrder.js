@@ -1,6 +1,9 @@
 import React,{Component} from 'react';
+import './placeOrder.css'
 
-const menuUrl = "http://zomatoajulypi.herokuapp.com/menuItem"
+const menuUrl = "http://zomatoajulypi.herokuapp.com/menuItem";
+const postUrl = "http://localhost:3214/booking";
+
 
 class PlaceBooking extends Component {
     constructor(props){
@@ -9,19 +12,103 @@ class PlaceBooking extends Component {
         this.state={
             id:Math.floor(Math.random()*100000),
             hotel_name:this.props.match.params.restName,
-            name:'',
-            phone:'',
-            email:'',
+            name:'Aakash',
+            phone:'76767757567',
+            email:'a@gmail.com',
             cost:0,
+            address:'Hno12',
             details:''
         }
     }
+    handleChange = (event) => {
+        this.setState({[event.target.name]:event.target.value})
+    }
+    renderItems = (data) => {
+        if(data){
+            return data.map((item,index) => {
+                return(
+                    <div className="orderItems" key={index}>
+                        <img src={item.img} alt={item.name}/>
+                        <h3>{item.name}</h3>
+                    </div>
+                )
+            })
+        }else{
+            return(
+                <img src="/images/loader.gif" alt="loader"/>
+            )
+        }
+    }
+
+    handleSubmit = () => {
+        var obj = this.state
+        obj.details = sessionStorage.getItem('menu')
+        fetch(postUrl,{
+            method: 'POST',
+            headers: {
+                'accept': 'application/json',
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(obj)
+        })
+        .then(console.log('booking'))
+    }
     render(){
         return(
-            <>
-             <h1>Place Booking</h1>
-             <h3>{this.state.cost}</h3>
-            </>
+            <div className="container">
+                <div className="panel panel-info">
+                    <div className="panel-heading">
+                        <h3>
+                            Your Order From {this.props.match.params.restName}
+                        </h3>
+                    </div>
+                    <div className="panel-body">
+                        <div className="row">
+                            <div className="col-md-12">
+                                <div className="col-md-6">
+                                    <div className="form-group">
+                                        <label>Name</label>
+                                        <input className="form-control" name="name" 
+                                        value={this.state.name} onChange={this.handleChange}/>
+                                    </div>
+                                </div>
+                                <div className="col-md-6">
+                                    <div className="form-group">
+                                        <label>Email</label>
+                                        <input className="form-control" name="email" 
+                                        value={this.state.email} onChange={this.handleChange}/>
+                                    </div>
+                                </div>
+                                <div className="col-md-6">
+                                    <div className="form-group">
+                                        <label>Phone</label>
+                                        <input className="form-control" name="phone" 
+                                        value={this.state.phone} onChange={this.handleChange}/>
+                                    </div>
+                                </div>
+                                <div className="col-md-6">
+                                    <div className="form-group">
+                                        <label>Address</label>
+                                        <input className="form-control" name="address" 
+                                        value={this.state.address} onChange={this.handleChange}/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {this.renderItems(this.state.details)}
+                        <input type="hidden" name="cost" value={this.state.cost}/>
+                        <input type="hidden" name="id" value={this.state.id}/>
+                        <div className="row">
+                            <div className="col-md-12">
+                                <h2>Total cost is Rs.{this.state.cost}</h2>
+                            </div>
+                        </div>
+                        <button className="btn btn-success" onClick={this.handleSubmit}>
+                            Checkout
+                        </button>
+                    </div>
+                </div>
+            </div>
            
         )
     }
@@ -43,14 +130,11 @@ class PlaceBooking extends Component {
         })
         .then((res) => res.json())
         .then((data) => {
+            var menuDetails = []
             var TotalPrice = 0
             data.map((item) => {
+                var myObj = {}
                 TotalPrice = TotalPrice +parseInt(item.menu_price)
-                return 'ok'
-            })
-            var menuDetails = []
-            var myObj = {}
-            data.map((item) => {
                 myObj.name = item.menu_name
                 myObj.img = item.menu_image
                 menuDetails.push(myObj)
@@ -58,7 +142,6 @@ class PlaceBooking extends Component {
             })
             this.setState({cost:TotalPrice,details:menuDetails})
         })
-   
     }
 }
 
