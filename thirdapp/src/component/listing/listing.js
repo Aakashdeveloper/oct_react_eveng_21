@@ -1,6 +1,8 @@
 import React,{Component} from 'react';
 import axios from 'axios';
 import ListingDisplay from './listingDisplay';
+import CuisineFilter from '../filters/cuisineFilter';
+import CostFilter from '../filters/costFilter';
 
 const url = "https://zomatoajulypi.herokuapp.com/restaurant?mealtype_id="
 class Listing extends Component{
@@ -20,6 +22,8 @@ class Listing extends Component{
                         <center>
                              <h1>Filter</h1>
                         </center>
+                        <CuisineFilter mealId={this.props.match.params.mealid}/>
+                        <CostFilter mealId={this.props.match.params.mealid}/>
                     </div>
                     <ListingDisplay restData={this.state.restList}/>
                 </div>

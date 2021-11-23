@@ -9,6 +9,36 @@
       "cost": 450,
       "address": "Hno12",
       "details": "58,59"
+    },
+    {
+      "id": 35760,
+      "hotel_name": "Food Adda",
+      "name": "Aakash",
+      "phone": "76767757567",
+      "email": "a@gmail.com",
+      "cost": 707,
+      "address": "Hno12",
+      "details": "13,12,15"
+    },
+    {
+      "id": 66439,
+      "hotel_name": "Burger King",
+      "name": "Aakash",
+      "phone": "76767757567",
+      "email": "a@gmail.com",
+      "cost": 140,
+      "address": "Hno12",
+      "details": "53,55"
+    },
+    {
+      "id": 92027,
+      "hotel_name": "New Udupi Grand",
+      "name": "Aakash",
+      "phone": "6465455",
+      "email": "aakash@gmail.com",
+      "cost": 290,
+      "address": "Hno12",
+      "details": "69,70,67,68"
     }
   ]
 }

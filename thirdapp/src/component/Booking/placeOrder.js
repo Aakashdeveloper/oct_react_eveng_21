@@ -51,7 +51,7 @@ class PlaceBooking extends Component {
             },
             body: JSON.stringify(obj)
         })
-        .then(console.log('booking'))
+        .then(this.props.history.push('/viewOrder'))
     }
     render(){
         return(
