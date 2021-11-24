@@ -14,6 +14,10 @@ class Listing extends Component{
         }
     }
 
+    setDataPerFilter = (data) => {
+        this.setState({restList:data})
+    }
+
     render(){
         return(
             <div className="row">
@@ -22,8 +26,11 @@ class Listing extends Component{
                         <center>
                              <h1>Filter</h1>
                         </center>
-                        <CuisineFilter mealId={this.props.match.params.mealid}/>
-                        <CostFilter mealId={this.props.match.params.mealid}/>
+                        <CuisineFilter 
+                            mealId={this.props.match.params.mealid}
+                            restPerCuisine={(data) => {this.setDataPerFilter(data)}}/>
+                        <CostFilter mealId={this.props.match.params.mealid}
+                            restPerCost={(data) => {this.setDataPerFilter(data)}}/>
                     </div>
                     <ListingDisplay restData={this.state.restList}/>
                 </div>

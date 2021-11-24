@@ -328,6 +328,7 @@ match > Params
 (get) allorder>            
 (post)placeOrder >         
 
+https://developerpayment.herokuapp.com/paynow
 
 npm i react-router-dom@5.3.0
 

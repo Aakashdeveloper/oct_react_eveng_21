@@ -16,7 +16,7 @@ const Routing = () => {
                 <Route path="/list/:mealid" component={Listing}/> 
                 <Route path="/details/:restid" component={RestDetails}/> 
                 <Route path="/placeOrder/:restName" component={PlaceOrder}/> 
-                <Route path="/viewOrder" component={ViewOrder}/> 
+                <Route path="/viewBooking" component={ViewOrder}/> 
             <Footer/>
         </BrowserRouter>
     )

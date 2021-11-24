@@ -39,6 +39,36 @@
       "cost": 290,
       "address": "Hno12",
       "details": "69,70,67,68"
+    },
+    {
+      "id": 50029,
+      "hotel_name": "Food Adda",
+      "name": "Aakash",
+      "phone": "76767757567",
+      "email": "a@gmail.com",
+      "cost": 349,
+      "address": "Hno12",
+      "details": "13"
+    },
+    {
+      "id": 83402,
+      "hotel_name": "Burger King",
+      "name": "Aakash",
+      "phone": "76767757567",
+      "email": "a@gmail.com",
+      "cost": 289,
+      "address": "Hno12",
+      "details": "53,54"
+    },
+    {
+      "id": 40780,
+      "hotel_name": "Captain Sam's",
+      "name": "Aakash",
+      "phone": "76767757567",
+      "email": "a@gmail.com",
+      "cost": 308,
+      "address": "Hno12",
+      "details": "27,28"
     }
   ]
 }

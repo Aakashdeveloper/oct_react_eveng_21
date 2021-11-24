@@ -1,14 +1,26 @@
 import React,{Component} from 'react';
 import axios from 'axios';
 
-const url = "https://zomatoajulypi.herokuapp.com/filter/4?cuisine=1"
+const url = "https://zomatoajulypi.herokuapp.com/filter"
 
 class CuisineFilter extends Component{
+    cusinieFilter = (event) => {
+        let mealId = this.props.mealId;
+        let cusinieId = event.target.value;
+        let cusinieUrl;
+        if(cusinieId == ""){
+            cusinieUrl=`${url}/${mealId}`
+        }else{
+            cusinieUrl=`${url}/${mealId}?cuisine=${cusinieId}`
+        }
+        axios.get(cusinieUrl)
+            .then((response) => {this.props.restPerCuisine(response.data)})
+    }
     render(){
         return(
             <>
                 <center>Cuisine Filter</center>
-                <div style={{marginLeft:'14%'}}>
+                <div style={{marginLeft:'14%'}} onChange={this.cusinieFilter}>
                     <label className="radio">
                         <input type="radio" value="" name="cuisine"/>All
                     </label>

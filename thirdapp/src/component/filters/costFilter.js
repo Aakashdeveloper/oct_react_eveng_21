@@ -1,15 +1,30 @@
 import React,{Component} from 'react';
 import axios from 'axios';
 
-const url = " https://zomatoajulypi.herokuapp.com/filter/1?hcost=1000&lcost=500"
+const url = " https://zomatoajulypi.herokuapp.com/filter"
 
 class CostFilter extends Component{
+    costFilter = (event) => {
+        let mealId = this.props.mealId;
+        let cost = event.target.value.split('-')
+        let lcost = cost[0];
+        let hcost = cost[1];
+        let costUrl;
+        if(event.target.value == ""){
+            costUrl=`${url}/${mealId}`
+        }else{
+            costUrl=`${url}/${mealId}?hcost=${hcost}&lcost=${lcost}`
+        }
+        axios.get(costUrl)
+            .then((response) => {this.props.restPerCost(response.data)})
+    }
+
     render(){
         console.log(this.props)
         return(
             <>
                 <center>Cost Filter</center>
-                <div style={{marginLeft:'14%'}}>
+                <div style={{marginLeft:'14%'}} onChange={this.costFilter}>
                     <label className="radio">
                         <input type="radio" value="" name="cuisine"/>All
                     </label>

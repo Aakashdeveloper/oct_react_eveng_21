@@ -51,7 +51,7 @@ class PlaceBooking extends Component {
             },
             body: JSON.stringify(obj)
         })
-        .then(this.props.history.push('/viewOrder'))
+        .then(console.log('payment'))
     }
     render(){
         return(
@@ -63,6 +63,7 @@ class PlaceBooking extends Component {
                         </h3>
                     </div>
                     <div className="panel-body">
+                        <form action="https://developerpayment.herokuapp.com/paynow" method="POST">
                         <div className="row">
                             <div className="col-md-12">
                                 <div className="col-md-6">
@@ -98,14 +99,17 @@ class PlaceBooking extends Component {
                         {this.renderItems(this.state.details)}
                         <input type="hidden" name="cost" value={this.state.cost}/>
                         <input type="hidden" name="id" value={this.state.id}/>
+                        <input type="hidden" name="hotel_name" value={this.props.match.params.restName}/>
                         <div className="row">
                             <div className="col-md-12">
                                 <h2>Total cost is Rs.{this.state.cost}</h2>
                             </div>
                         </div>
-                        <button className="btn btn-success" onClick={this.handleSubmit}>
+                        <button className="btn btn-success" onClick={this.handleSubmit}
+                        type="submit">
                             Checkout
                         </button>
+                        </form>
                     </div>
                 </div>
             </div>
