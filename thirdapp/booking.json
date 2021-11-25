@@ -1,74 +1,17 @@
 {
   "booking": [
     {
-      "id": 11562,
-      "hotel_name": "Cafe Wink",
+      "id": 81764,
+      "hotel_name": "Street Foods By Punjab Grill",
       "name": "Aakash",
       "phone": "76767757567",
-      "email": "a@gmail.com",
-      "cost": 450,
-      "address": "Hno12",
-      "details": "58,59"
-    },
-    {
-      "id": 35760,
-      "hotel_name": "Food Adda",
-      "name": "Aakash",
-      "phone": "76767757567",
-      "email": "a@gmail.com",
-      "cost": 707,
-      "address": "Hno12",
-      "details": "13,12,15"
-    },
-    {
-      "id": 66439,
-      "hotel_name": "Burger King",
-      "name": "Aakash",
-      "phone": "76767757567",
-      "email": "a@gmail.com",
-      "cost": 140,
-      "address": "Hno12",
-      "details": "53,55"
-    },
-    {
-      "id": 92027,
-      "hotel_name": "New Udupi Grand",
-      "name": "Aakash",
-      "phone": "6465455",
       "email": "aakash@gmail.com",
-      "cost": 290,
+      "cost": 508,
       "address": "Hno12",
-      "details": "69,70,67,68"
-    },
-    {
-      "id": 50029,
-      "hotel_name": "Food Adda",
-      "name": "Aakash",
-      "phone": "76767757567",
-      "email": "a@gmail.com",
-      "cost": 349,
-      "address": "Hno12",
-      "details": "13"
-    },
-    {
-      "id": 83402,
-      "hotel_name": "Burger King",
-      "name": "Aakash",
-      "phone": "76767757567",
-      "email": "a@gmail.com",
-      "cost": 289,
-      "address": "Hno12",
-      "details": "53,54"
-    },
-    {
-      "id": 40780,
-      "hotel_name": "Captain Sam's",
-      "name": "Aakash",
-      "phone": "76767757567",
-      "email": "a@gmail.com",
-      "cost": 308,
-      "address": "Hno12",
-      "details": "27,28"
+      "details": "36,36,38",
+      "status": "TXN_SUCCESS",
+      "date": "2021-11-25%2021:26:26.0",
+      "bank": "State%20Bank%20of%20India"
     }
   ]
 }

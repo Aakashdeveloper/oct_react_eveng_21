@@ -8,7 +8,7 @@ class CuisineFilter extends Component{
         let mealId = this.props.mealId;
         let cusinieId = event.target.value;
         let cusinieUrl;
-        if(cusinieId == ""){
+        if(cusinieId === ""){
             cusinieUrl=`${url}/${mealId}`
         }else{
             cusinieUrl=`${url}/${mealId}?cuisine=${cusinieId}`

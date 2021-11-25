@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 const PostDetails = (props) => {
     console.log(props)
-    console.log(props.location.search.split('=')[1])
+    //console.log(props.location.search.split('=')[1])
     console.log(props.match.params.topic)
     return(
         <>

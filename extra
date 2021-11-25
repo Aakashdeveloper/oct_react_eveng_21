@@ -335,3 +335,20 @@ npm i react-router-dom@5.3.0
 //////
 npm i -g json-server
 json-server --watch booking.json --port 3214
+
+var a ="status=TXN_SUCCESS&ORDERID=TEST_17266&date=2021-11-25%2021:16:36.0&bank=Bharat%20Bank"
+undefined
+a.split('&')
+(4) ['status=TXN_SUCCESS', 'ORDERID=TEST_17266', 'date=2021-11-25%2021:16:36.0', 'bank=Bharat%20Bank']0: "status=TXN_SUCCESS"1: "ORDERID=TEST_17266"2: "date=2021-11-25%2021:16:36.0"3: "bank=Bharat%20Bank"length: 4[[Prototype]]: Array(0)
+a.split('&')[0].split('=')[1]
+'TXN_SUCCESS'
+a.split('&')[1].split('=')[1]
+'TEST_17266'
+a.split('&')[2].split('=')[1]
+'2021-11-25%2021:16:36.0'
+a.split('&')[3].split('=')[1]
+'Bharat%20Bank'
+a.split('&')[1].split('=')[1].split('_')
+(2) ['TEST', '17266']
+a.split('&')[1].split('=')[1].split('_')[1]
+'17266'

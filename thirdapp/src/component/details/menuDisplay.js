@@ -14,9 +14,9 @@ class MenuDisplay extends Component{
 
     renderCart = (orders) => { 
         if(orders){
-            return orders.map((item) => {
+            return orders.map((item,index) => {
                 return(
-                    <b>{item},&nbsp;&nbsp;</b>
+                    <b key={index}>{item},&nbsp;&nbsp;</b>
                 )
             })
         }
@@ -28,7 +28,8 @@ class MenuDisplay extends Component{
                     <div key={item.menu_id}>
                         <div className="col-md-7 items">
                             <b>{item.menu_id}</b> &nbsp;
-                            <img src={item.menu_image} style={{height:80,width:80}}/>
+                            <img src={item.menu_image} style={{height:80,width:80}}
+                            alt={item.menu_name}/>
                             &nbsp;&nbsp; {item.menu_name} - Rs.{item.menu_price}
                         </div>
                         <div className="col-md-4">
