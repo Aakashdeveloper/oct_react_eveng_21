@@ -376,3 +376,5 @@ a.split('&')[1].split('=')[1].split('_')[1]
 https://docs.github.com/en/developers/apps/building-oauth-apps/authorizing-oauth-apps
 
 
+docker build . -t appname
+docker run -p 8700:3000 appname
