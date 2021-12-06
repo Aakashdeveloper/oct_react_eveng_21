@@ -13,6 +13,13 @@ class ViewBooking extends Component {
         }
     }
     render(){
+        if(!sessionStorage.getItem('userdata')){
+            return(
+                <div>
+                    <h1>Login First To See Booking</h1>
+                </div>
+            )
+        }
         return(
            <>
             <OrderDisplay bookdata={this.state.booking}/>
@@ -41,7 +48,9 @@ class ViewBooking extends Component {
                 })
             }
         }
-        axios.get(`${url}`).then((res) => {this.setState({booking:res.data})} )
+        if(sessionStorage.getItem('userdata')){
+            axios.get(`${url}?email=${sessionStorage.getItem('userdata').split(',')[1]}`).then((res) => {this.setState({booking:res.data})} )
+        }
     }
 }
 
