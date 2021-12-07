@@ -23,8 +23,8 @@ Deployment
 -> Aws
 -> Docker
 -> Nginx
-/////////////////////
 React-JWT(Login Logout)-2
+/////////////////////
 React_hooks -1
 React-GraphQL-1
 HOC
@@ -378,3 +378,4 @@ https://docs.github.com/en/developers/apps/building-oauth-apps/authorizing-oauth
 
 docker build . -t appname
 docker run -p 8700:3000 appname
+

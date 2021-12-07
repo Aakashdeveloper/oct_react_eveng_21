@@ -7,7 +7,9 @@ class Header extends Component {
         super()
 
         this.state={
-            userdata:''
+            userdata:'',
+            uesrname:'',
+            imgUrl:''
         }
     }
 
@@ -20,24 +22,46 @@ class Header extends Component {
     }
 
     conditionalHeader = () => {
-        if(this.state.userdata.name){
-            let data = this.state.userdata;
-            let outputArray = [data.name,data.email,data.phone,data.role];
-            sessionStorage.setItem('userdata',outputArray)
-            return(
-               <ul className="nav navbar-nav navbar-right">
-                <li><Link>Hi {outputArray[0]}</Link></li>
-                <li>
-                    <button onClick={this.handleLogout}>
-                        Logout
-                    </button>
-                </li>
-               </ul>
-            )
+        if(this.state.userdata.name ||  sessionStorage.getItem('username') !== null){
+            if(this.props.location.search){
+                const code =(this.props.location.search).split('=')[1];
+                if(code){
+                    return(
+                        <>
+                            <li>
+                                <a>
+                                    <img src={this.state.imgUrl} style={{height:50,width:50}}/>
+                                    Hi {sessionStorage.getItem('username')}
+                                </a>
+                            </li>
+                        </>
+                    )
+                }
+            }else{
+                let data = this.state.userdata;
+                let outputArray = [data.name,data.email,data.phone,data.role];
+                sessionStorage.setItem('userdata',outputArray)
+                return(
+                   <ul className="nav navbar-nav navbar-right">
+                    <li><Link>Hi {outputArray[0]}</Link></li>
+                    <li>
+                        <button onClick={this.handleLogout}>
+                            Logout
+                        </button>
+                    </li>
+                   </ul>
+                )
+            }
+            
             
         }else{
             return(
                 <ul className="nav navbar-nav navbar-right">
+                <li>
+                    <a href="https://github.com/login/oauth/authorize?client_id=930f92e500db2f4d357c">
+                        Login With Github
+                    </a>
+                </li>
                 <li><Link to="/register"><span className="glyphicon glyphicon-user"></span> Sign Up</Link></li>
                 <li><Link to="/login"><span className="glyphicon glyphicon-log-in"></span> Login</Link></li>
                 </ul>          
@@ -72,18 +96,45 @@ class Header extends Component {
     }
     
     componentDidMount(){
-        fetch(url,{
-            method: 'GET',
-            headers: {
-                'x-access-token':sessionStorage.getItem('ltk')
+        if(this.props.location.search){
+            const code =(this.props.location.search).split('=')[1];
+            if(code){
+                let requestedData={
+                    code:code
+                }
+                fetch(`http://localhost:9900/oauth`,{
+                    method:'POST',
+                    headers:{
+                        'accept':'application/json',
+                        'Content-Type':'application/json'
+                    },
+                    body: JSON.stringify(requestedData)
+                })
+                .then((res) => res.json())
+                .then((data) => {
+                    console.log(data)
+                    let user = data.name
+                    let img = data.avatar_url;
+                    sessionStorage.setItem('username',user);
+                    this.setState({uesrname:user, imgUrl:img})
+                })
             }
-        })
-        .then((res) => res.json())
-        .then((data) => {
-            this.setState({
-                userdata:data
+
+        }else{
+            fetch(url,{
+                method: 'GET',
+                headers: {
+                    'x-access-token':sessionStorage.getItem('ltk')
+                }
             })
-        })
+            .then((res) => res.json())
+            .then((data) => {
+                this.setState({
+                    userdata:data
+                })
+            })
+        }
+        
     }
 }
 
