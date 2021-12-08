@@ -24,10 +24,10 @@ Deployment
 -> Docker
 -> Nginx
 React-JWT(Login Logout)-2
-/////////////////////
 React_hooks -1
-React-GraphQL-1
 HOC
+/////////////////////
+React-GraphQL-1
 Basic React Native=1
 React-Redux =1
 React-Redux =1
@@ -379,3 +379,8 @@ https://docs.github.com/en/developers/apps/building-oauth-apps/authorizing-oauth
 docker build . -t appname
 docker run -p 8700:3000 appname
 
+https://www.codingame.com/playgrounds/8595/reactjs-higher-order-components-tutorial
+
+
+
+HOC > it take parameter as component and data and return component with data
