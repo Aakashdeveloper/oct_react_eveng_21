@@ -28,8 +28,8 @@ React_hooks -1
 HOC
 React-GraphQL-1
 Basic React Native=1
-/////////////////////
 React-Redux =1
+/////////////////////
 React-Redux =1
 ///////Walkthrough///////
 React-Saga -1
@@ -390,3 +390,9 @@ npm i apollo-boost apollo-graphql graphql-tag react-apollo
 /// step to generate react native///
 > npx create-react-native-app appname
 > https://reactnative.dev/docs/image
+
+//////////
+views > display
+action > Api Calling
+reducer > Manage State
+store > Save State
