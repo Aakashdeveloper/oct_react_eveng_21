@@ -396,3 +396,5 @@ views > display
 action > Api Calling
 reducer > Manage State
 store > Save State
+
+npm i redux react-redux redux-promise
